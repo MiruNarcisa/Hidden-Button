@@ -12,8 +12,9 @@ function showResult(id) {
 
 function generateButtons() {
     let buttons = document.getElementById('number-input').value
+    document.getElementById('buttonsCnt').innerHTML = "";
     for (let id = 1; id <= buttons; ++id) {
-        document.getElementById('container').innerHTML += `
+        document.getElementById('buttonsCnt').innerHTML += `
 <button id="${id}" type="button" class="btn btn-secondary" onClick="showResult(${id})">${id}</button>
 `;
     }
