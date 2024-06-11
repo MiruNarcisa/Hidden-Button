@@ -1,6 +1,6 @@
 let random = Math.floor(Math.random() * 3) + 1;
 
-function showResult(id) {
+function shoWinnerButton(id) {
     if (id == random) {
         document.getElementById(id).className = 'btn btn-success';
         document.getElementById('message').textContent = 'Congratulations. You won!';
@@ -15,7 +15,7 @@ function generateButtons() {
     document.getElementById('buttonsCnt').innerHTML = "";
     for (let id = 1; id <= buttons; ++id) {
         document.getElementById('buttonsCnt').innerHTML += `
-<button id="${id}" type="button" class="btn btn-secondary" onClick="showResult(${id})">${id}</button>
+<button id="${id}" type="button" class="btn btn-secondary" onClick="shoWinnerButton(${id})">${id}</button>
 `;
     }
 }
